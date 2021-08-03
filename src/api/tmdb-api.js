@@ -65,3 +65,4 @@ export const getMovie = async ( args ) => {
     }
     return response.json();
   };
+
