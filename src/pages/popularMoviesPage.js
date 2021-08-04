@@ -5,7 +5,7 @@ import { getPopularMovies } from "../api/tmdb-api";
 import AddToPlaylistIcon from '../components/cardIcons/addToPlaylist'
 import Spinner from '../components/spinner'
 
-const PopularPage = (props) => {
+const PopularMoviePage = (props) => {
 
   const { data, error, isLoading, isError }  = useQuery('popular', getPopularMovies)
 
@@ -29,4 +29,4 @@ const PopularPage = (props) => {
   );
 };
 
-export default PopularPage;
+export default PopularMoviePage;
