@@ -12,10 +12,10 @@ import Typography from "@material-ui/core/Typography";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import CalendarIcon from "@material-ui/icons/CalendarTodayTwoTone";
 import StarRateIcon from "@material-ui/icons/StarRate";
-import IconButton from "@material-ui/core/IconButton";
 import Grid from "@material-ui/core/Grid";
 import img from '../../images/film-poster-placeholder.png';
 import { MoviesContext } from "../../contexts/moviesContext"
+import AddToPlaylistIcon from "../cardIcons/addToPlaylist";
 
 
 const useStyles = makeStyles({
@@ -49,7 +49,7 @@ export default function MovieCard({ movie, action }) {
         movie.favorite ? (
           <Avatar className={classes.avatar}>
             <FavoriteIcon />
-          </Avatar>
+            </Avatar>
         ) : null
       }
       title={
@@ -87,6 +87,11 @@ export default function MovieCard({ movie, action }) {
         <Link to={`/movies/${movie.id}`}>
           <Button variant="outlined" size="medium" color="primary">
             More Info ...
+          </Button>
+        </Link>
+        <Link to={`/movies/${movie.id}/similar`}>
+          <Button variant="outlined" size="medium" color="primary">
+          Find Similar
           </Button>
         </Link>
       </CardActions>

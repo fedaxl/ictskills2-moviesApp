@@ -40,7 +40,7 @@ const App = () => {
           <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
           <Route exact path="/movies/popular" component={PopularMoviesPage} />
           <Route exact path="/movies/toprated" component={TopRatedMoviesPage} />
-          <Route exact path="/movies/similar" component={SimilarMoviesPage} />
+          <Route exact path="/movies/:id/similar" component={SimilarMoviesPage} />
           <Route path="/movies/:id" component={MoviePage} />
           <Route exact path="/" component={HomePage} />
           <Redirect from="*" to="/" />
