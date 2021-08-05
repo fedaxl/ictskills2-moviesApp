@@ -11,20 +11,20 @@ import TextField from "@material-ui/core/TextField";
 import SearchIcon from "@material-ui/icons/Search";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
-import img from '../../images/pexels-dziana-hasanbekava-5480827.jpg';
+import img from '../../images/tmdb.jpg';
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
-    backgroundColor: "rgb(204, 204, 0)",
+    background: 'linear-gradient(45deg, #7BD1C8 30%, #ABEFE8 90%)'
   },
   media: { height: 300 },
 
   formControl: {
     margin: theme.spacing(1),
-    minWidth: 220,
+    minWidth: 240,
     backgroundColor: "rgb(255, 255, 255)",
   },
 }));

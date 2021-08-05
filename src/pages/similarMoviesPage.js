@@ -1,32 +1,39 @@
 import React from "react";
-import { useQuery } from 'react-query';
-import PageTemplate from '../components/templateMovieListPage';
-import { getSimilarMovies } from "../api/tmdb-api";
-import AddToPlaylistIcon from '../components/cardIcons/addToPlaylist'
+import MovieDetails from "../components/movieDetails";
+import PageTemplate from "../components/templateMoviePage";
+import { getSimilarMovies } from '../api/tmdb-api';
+import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
 
-const SimilarMoviePage = (props) => {
+const SimilarMoviesPage = (props) => {
+  const { id } = props.match.params
 
-  const { data, error, isLoading, isError }  = useQuery('similar', getSimilarMovies)
+  const { data: movie, error, isLoading, isError } = useQuery(
+    ["similar", { id: id }],
+    getSimilarMovies
+  );
 
   if (isLoading) {
-    return <Spinner />
+    return <Spinner />;
   }
 
   if (isError) {
-    return <h1>{error.message}</h1>
-  }  
-  const movies = data.results;
+    return <h1>{error.message}</h1>;
+  }
 
   return (
-    <PageTemplate
-      title='Similar Movies'
-      movies={movies}
-      action={(movie) => {
-        return <AddToPlaylistIcon movie={movie} />
-      }}
-    />
+    <>
+      {movie ? (
+        <>
+          <PageTemplate movie={movie}>
+            <MovieDetails movie={movie} />
+          </PageTemplate>
+        </>
+      ) : (
+        <p>Waiting for movie details</p>
+      )}
+    </>
   );
 };
 
-export default SimilarMoviePage;
+export default SimilarMoviesPage;
