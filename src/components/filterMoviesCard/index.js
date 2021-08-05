@@ -18,7 +18,7 @@ import Spinner from '../spinner'
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
-    background: 'linear-gradient(45deg, #7BD1C8 30%, #ABEFE8 90%)'
+    background: 'linear-gradient(45deg, #1ed5a9 30%, #01b4e4 90%)'
   },
   media: { height: 300 },
 
