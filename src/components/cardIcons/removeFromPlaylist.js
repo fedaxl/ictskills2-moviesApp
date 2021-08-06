@@ -10,6 +10,7 @@ const RemoveFromPlaylistIcon = ({ movie }) => {
     e.preventDefault();
     context.removeFromFPlaylist(movie);
   };
+  
   return (
     <IconButton
       aria-label="remove from playlist"
