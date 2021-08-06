@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around",
     flexWrap: "wrap",
     padding: theme.spacing(1.5),
-    margin: 0
+    margin: 0,
   },
   tagLine: {
     fontSize: "1.5rem",

@@ -9,10 +9,12 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    color:  "rgb(3,37,65)",
     display: "flex",
     justifyContent: "space-around",
     flexWrap: "wrap",
     marginBottom: theme.spacing(1.5),
+    margin: 0,
   },
 }));
 

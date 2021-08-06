@@ -21,7 +21,7 @@ import { nominalTypeHack } from "prop-types";
 
 
 const useStyles = makeStyles({
-  card: { maxWidth: 360 },
+  card: { maxWidth: 345 },
   media: { height: 500 },
   avatar: {
     backgroundColor: "rgb(255, 0, 0)",
@@ -37,7 +37,7 @@ const useStyles = makeStyles({
     margin: 4,
   },
   view: {
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    background: 'linear-gradient(45deg, #4287f5 30%, #1d52a8 90%)',
     border: 0,
     borderRadius: 3,
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
@@ -48,7 +48,20 @@ const useStyles = makeStyles({
   },
   link: {
     textDecoration: 'none'
-  }
+  },
+  font: {
+    fontFamily: ['-apple-system',
+    'BlinkMacSystemFont',
+    '"Segoe UI"',
+    'Roboto',
+    '"Helvetica Neue"',
+    'Arial',
+    'sans-serif',
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+  ].join(','),
+  },
 });
 
 export default function MovieCard({ movie, action }) {
@@ -78,7 +91,7 @@ export default function MovieCard({ movie, action }) {
               ) : null
       }
       title={
-        <Typography  variant="h5" component="p">
+        <Typography className={classes.font} variant="h6" component="p">
           {movie.title}{" "}
         </Typography>
       }
@@ -94,13 +107,13 @@ export default function MovieCard({ movie, action }) {
       <CardContent>
         <Grid container>
           <Grid item xs={6}>
-            <Typography variant="h6" component="p">
+            <Typography className={classes.font} variant="h6" component="p">
               <CalendarIcon fontSize="small" />
               {movie.release_date}
             </Typography>
           </Grid>
           <Grid item xs={6}>
-            <Typography variant="h6" component="p">
+            <Typography className={classes.font} variant="h6" component="p">
               <StarRateIcon fontSize="small" />
               {"  "} {movie.vote_average}{" "}
             </Typography>

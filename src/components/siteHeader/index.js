@@ -14,7 +14,12 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles((theme) => ({
   title: {
+    //backgroundColor: "rgb(3,37,65)",
+    color: "rgb(255, 255, 255)",
     flexGrow: 1,
+  },
+  background: { 
+    backgroundColor: "rgb(3,37,65)"
   },
   offset: theme.mixins.toolbar,
 }));
@@ -46,7 +51,7 @@ const SiteHeader = ( { history }) => {
 
   return (
     <>
-      <AppBar position="fixed" color="secondary">
+      <AppBar className={classes.background} position="fixed" color="secondary">
         <Toolbar>
           <Typography variant="h4" className={classes.title}>
             TMDB Client
