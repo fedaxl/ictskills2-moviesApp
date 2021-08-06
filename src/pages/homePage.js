@@ -4,9 +4,6 @@ import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
 import {getMovies} from '../api/tmdb-api';
 import AddToFavoritesIcon from '../components/cardIcons/addToFavorites';
-import { useAuth } from "../contexts/AuthContext";
-import { Link, useHistory } from "react-router-dom";
-import { Card, Button, Alert } from "react-bootstrap"
 
 
 const HomePage = (props) => {

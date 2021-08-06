@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Redirect, Switch, Link } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from 'react-query/devtools'
-import { AuthProvider } from "../contexts/AuthContext"
+import { AuthProvider } from "./contexts/authContext"
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
 import FavoriteMoviesPage from "./pages/favoriteMoviesPage"; 
@@ -16,11 +16,11 @@ import MovieReviewPage from "./pages/movieReviewPage";
 import MoviesContextProvider from "./contexts/moviesContext";
 import SiteHeader from "./components/siteHeader";
 import AddMovieReviewPage from './pages/addMovieReviewPage'
-import Dashboard from "./components/userDashboard"
+import Dashboard from "./pages/dashboard"
 import Login from "./pages/loginPage"
-import PrivateRoute from "./components/PrivateRoute"
-import ForgotPassword from "./components/ForgotPassword"
-import UpdateProfile from "./pages/UpdateProfile"
+import PrivateRoute from "./routes/privateRoute.js"
+import ForgotPassword from "./pages/forgotPassword"
+import UpdateProfile from "./pages/updateProfilePage"
 import Signup from "./pages/signupPage"
 
 const queryClient = new QueryClient({
@@ -50,15 +50,19 @@ const App = () => {
           <Route exact path="/movies/:id/similar" component={SimilarMoviesPage} />
           <Route exact path="/movies/playlist" component={PlaylistMoviesPage} />
           <Route path="/movies/:id" component={MoviePage} />
-          <Route path="/signup" component={Signup} />
-          <Route path="/login" component={Login} />
-          <Route path="/forgot-password" component={ForgotPassword} />
           <Route exact path="/" component={HomePage} />
-          <PrivateRoute exact path="/" component={Dashboard} />
-          <PrivateRoute path="/update-profile" component={UpdateProfile} />
           <Redirect from="*" to="/" />
         </Switch>
         </MoviesContextProvider>
+        <AuthProvider>
+          <Switch>
+          <Route path="/signup" component={Signup} />
+          <Route path="/login" component={Login} />
+          <Route path="/forgot-password" component={ForgotPassword} />
+          <PrivateRoute Route exact path="/dashboard" component={Dashboard} />
+          <PrivateRoute path="/update-profile" component={UpdateProfile} />
+          </Switch>
+        </AuthProvider>
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>

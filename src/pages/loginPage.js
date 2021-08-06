@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 //import PageTemplate from "../components/templateMovieListPage";
 import { Form, Button, Card, Alert } from "react-bootstrap"
-import { useAuth } from "../contexts/AuthContext"
+import { useAuth } from "../contexts/authContext"
 import { Link, useHistory } from "react-router-dom"
 
 export default function Login() {
@@ -19,7 +19,7 @@ export default function Login() {
       setError("")
       setLoading(true)
       await login(emailRef.current.value, passwordRef.current.value)
-      history.push("/")
+      history.push("/dashboard")
     } catch {
       setError("Failed to log in")
     }
