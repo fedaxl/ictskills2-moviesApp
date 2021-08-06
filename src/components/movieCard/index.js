@@ -15,15 +15,40 @@ import StarRateIcon from "@material-ui/icons/StarRate";
 import Grid from "@material-ui/core/Grid";
 import img from '../../images/film-poster-placeholder.png';
 import { MoviesContext } from "../../contexts/moviesContext"
-import AddToPlaylistIcon from "../cardIcons/addToPlaylist";
+import { nominalTypeHack } from "prop-types";
+//import CompareArrowsIcon from '@material-ui/icons/CompareArrows';
+//import PlaylistAddIcon from "@material-ui/icons/PlaylistAdd";
 
 
 const useStyles = makeStyles({
-  card: { maxWidth: 345 },
+  card: { maxWidth: 360 },
   media: { height: 500 },
   avatar: {
     backgroundColor: "rgb(255, 0, 0)",
   },
+  info: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    border: 0,
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    height: 48,
+    padding: '0 20px',
+    margin: 4,
+  },
+  view: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    border: 0,
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    height: 48,
+    padding: '0 20px',
+    margin: 4,
+  },
+  link: {
+    textDecoration: 'none'
+  }
 });
 
 export default function MovieCard({ movie, action }) {
@@ -40,7 +65,7 @@ export default function MovieCard({ movie, action }) {
     e.preventDefault();
     addToFavorites(movie);
   };
-
+ 
   return (
     <Card className={classes.card}>
       <CardHeader
@@ -50,10 +75,10 @@ export default function MovieCard({ movie, action }) {
           <Avatar className={classes.avatar}>
             <FavoriteIcon />
             </Avatar>
-        ) : null
+              ) : null
       }
       title={
-        <Typography variant="h5" component="p">
+        <Typography  variant="h5" component="p">
           {movie.title}{" "}
         </Typography>
       }
@@ -84,13 +109,13 @@ export default function MovieCard({ movie, action }) {
       </CardContent>
       <CardActions disableSpacing>
         {action(movie)}
-        <Link to={`/movies/${movie.id}`}>
-          <Button variant="outlined" size="medium" color="primary">
-            More Info ...
+        <Link className={classes.link} to={`/movies/${movie.id}`}>
+          <Button className={classes.info} variant="outlined" size="medium" color="primary">
+            MORE INFO
           </Button>
         </Link>
-        <Link to={`/movies/${movie.id}/similar`}>
-          <Button variant="outlined" size="medium" color="primary">
+        <Link className={classes.link} to={`/movies/${movie.id}/similar`}>
+          <Button className={classes.view} variant="outlined" size="medium" color="primary">
           Find Similar
           </Button>
         </Link>

@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around",
     flexWrap: "wrap",
     marginBottom: theme.spacing(1.5),
-    //background #032541 dark blue
   },
 }));
 
