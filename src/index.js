@@ -44,11 +44,11 @@ const App = () => {
           <Route exact path="/reviews/form" component={AddMovieReviewPage} />
           <Route path="/reviews/:id" component={MovieReviewPage} />
           <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
-          <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
+          <PrivateRoute exact path="/movies/favorites" component={FavoriteMoviesPage} />
           <Route exact path="/movies/popular" component={PopularMoviesPage} />
           <Route exact path="/movies/toprated" component={TopRatedMoviesPage} />
           <Route exact path="/movies/:id/similar" component={SimilarMoviesPage} />
-          <Route exact path="/movies/playlist" component={PlaylistMoviesPage} />
+          <PrivateRoute exact path="/movies/playlist" component={PlaylistMoviesPage} />
           <Route path="/movies/:id" component={MoviePage} />
           <Route exact path="/" component={HomePage} />
           <Redirect from="*" to="/" />
