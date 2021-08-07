@@ -1,59 +1,32 @@
-import React, { useRef, useState } from "react"
-//import PageTemplate from "../components/templateMovieListPage";
-import { Form, Button, Card, Alert } from "react-bootstrap"
-import { useAuth } from "../contexts/authContext"
-import { Link, useHistory } from "react-router-dom"
+import React, { useContext } from "react";
+import { Redirect } from "react-router-dom";
+import { AuthContext } from "../contexts/authContext";
+import PageTemplate from "../components/templateMovieListPage"
 
-export default function Login() {
-  const emailRef = useRef()
-  const passwordRef = useRef()
-  const { login } = useAuth()
-  const [error, setError] = useState("")
-  const [loading, setLoading] = useState(false)
-  const history = useHistory()
+const LoginPage = (props) => {
+  const context = useContext(AuthContext);
 
-  async function handleSubmit(e) {
-    e.preventDefault()
+  const login = () => {
+    const username = Math.random().toString(36).substring(7);
+    context.authenticate(username, "pass1");
+  };
 
-    try {
-      setError("")
-      setLoading(true)
-      await login(emailRef.current.value, passwordRef.current.value)
-      history.push("/dashboard")
-    } catch {
-      setError("Failed to log in")
-    }
+  // Set 'from' to path where browser is redirected after a successful login.
+  // Either / or the protected path user tried to access.
+  const { from } = props.location.state || { from: { pathname: "/" } };
 
-    setLoading(false)
-  }
-
-  return (
+  return context.isAuthenticated ? (
+    <Redirect to={from} />
+  ) : (
     <>
-      <Card>
-        <Card.Body>
-          <h2 className="text-center mb-4">Log In</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <Form onSubmit={handleSubmit}>
-            <Form.Group id="email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
-            </Form.Group>
-            <Form.Group id="password">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" ref={passwordRef} required />
-            </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
-              Log In
-            </Button>
-          </Form>
-          <div className="w-100 text-center mt-3">
-            <Link to="/forgot-password">Forgot Password?</Link>
-          </div>
-        </Card.Body>
-      </Card>
-      <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up</Link>
-      </div>
-    </>
-  )
-}
+
+      <h2>Login page</h2>
+      <p>You must log in to view the protected pages </p>
+      {/* Login web form  */}
+      <button onClick={login}>Submit</button>
+  
+    </>   
+  );
+};
+
+export default LoginPage; 

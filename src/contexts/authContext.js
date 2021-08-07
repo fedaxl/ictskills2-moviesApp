@@ -1,62 +1,38 @@
-import React, { useContext, useState, useEffect } from "react"
-import { auth } from "../api/firebase"
+import React, { createContext, useState, useEffect } from "react"
+//import { auth } from "../api/firebase"
 
-const AuthContext = React.createContext()
+export const AuthContext = createContext(null);
 
-export function useAuth() {
-  return useContext(AuthContext)
-}
 
-export function AuthProvider({ children }) {
-  const [currentUser, setCurrentUser] = useState()
-  const [loading, setLoading] = useState(true)
+const AuthContextProvider = (props) => {
+  //const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [user, setUser] = useState({ username: null, password: null });
 
-  function signup(email, password) {
-    return auth.createUserWithEmailAndPassword(email, password)
-  }
+ // useEffect(() => {
+ // auth.setIsAuthenticated(true);
+ // }, [newUser.username]);
 
-  function login(email, password) {
-    return auth.signInWithEmailAndPassword(email, password)
-  }
+  const authenticate = (username, password) => {
+    setUser({ username, password });
+  };
 
-  function logout() {
-    return auth.signOut()
-  }
+  const isAuthenticated = user.username === null ? false : true
 
-  function resetPassword(email) {
-    return auth.sendPasswordResetEmail(email)
-  }
-
-  function updateEmail(email) {
-    return currentUser.updateEmail(email)
-  }
-
-  function updatePassword(password) {
-    return currentUser.updatePassword(password)
-  }
-
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(user => {
-      setCurrentUser(user)
-      setLoading(false)
-    })
-
-    return unsubscribe
-  }, [])
-
-  const value = {
-    currentUser,
-    login,
-    signup,
-    logout,
-    resetPassword,
-    updateEmail,
-    updatePassword
-  }
+  const signout = () => {
+    setTimeout(() => setUser( { username: null, password: null } ), 100);
+  };
 
   return (
-    <AuthContext.Provider value={value}>
-      {!loading && children}
+    <AuthContext.Provider
+      value={{
+        isAuthenticated,
+        authenticate,
+        signout,
+      }}
+    >
+      {props.children}
     </AuthContext.Provider>
-  )
-}
+  );
+};
+
+export default AuthContextProvider; 
