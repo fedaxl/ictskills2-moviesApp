@@ -1,6 +1,7 @@
 # Assignment - ReactJS app.
 
-Name: ... your name ...
+Name: Federica Fiorenza
+WIT Id: 20091413
 
 ## Overview.
 

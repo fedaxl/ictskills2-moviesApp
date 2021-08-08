@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Redirect } from "react-router-dom";
 import { AuthContext } from "../contexts/authContext";
-import PageTemplate from "../components/templateMovieListPage"
+//import PageTemplate from "../components/templateMovieListPage"
 
 const LoginPage = (props) => {
   const context = useContext(AuthContext);

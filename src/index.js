@@ -15,9 +15,11 @@ import PlaylistMoviesPage from "./pages/playlistMoviesPage";
 import MovieReviewPage from "./pages/movieReviewPage";
 import MoviesContextProvider from "./contexts/moviesContext";
 import SiteHeader from "./components/siteHeader";
-import AddMovieReviewPage from './pages/addMovieReviewPage'
-import LoginPage from "./pages/loginPage"
-import PrivateRoute from "./privateRoute.js"
+import AddMovieReviewPage from './pages/addMovieReviewPage';
+import LoginPage from "./pages/loginPage";
+import PrivateRoute from "./privateRoute.js";
+import ActorsPage from "./pages/actorsPage";
+import ActorDetailsPage from "./pages/actorDetailsPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -47,6 +49,8 @@ const App = () => {
           <Route exact path="/movies/:id/similar" component={SimilarMoviesPage} />
           <PrivateRoute exact path="/movies/playlist" component={PlaylistMoviesPage} />
           <Route path="/movies/:id" component={MoviePage} />
+          <Route exact path="/actors" component={ActorsPage} />
+          <Route path="/actors/:id" component={ActorDetailsPage} />
           <Route exact path="/" component={HomePage} />
           <Route path="/login" component={LoginPage} />
           <Redirect from="*" to="/" />
