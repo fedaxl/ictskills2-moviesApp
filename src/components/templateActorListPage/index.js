@@ -3,7 +3,7 @@ import Header from "../headerActorList";
 import FilterCard from "../filterActorsCard";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import ActorList from "../actorsList";
+import ActorList from "../actorList";
 
 const useStyles = makeStyles({
   root: {
@@ -14,6 +14,8 @@ const useStyles = makeStyles({
 function ActorListPageTemplate({ actors, name, action }) {
   const classes = useStyles();
   const [nameFilter, setNameFilter] = useState("");
+  //const [genreFilter, setGenreFilter] = useState("0");
+  //const genreId = Number(genreFilter);
 
   let displayedActors = actors
     .filter((a) => {

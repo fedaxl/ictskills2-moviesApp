@@ -2,11 +2,11 @@ import React from "react";
 import PageTemplate from "../components/templateActorListPage";
 import { useQuery } from 'react-query'
 import Spinner from '../components/spinner'
-import {getCast} from '../api/tmdb-api'
+import {getActors} from '../api/tmdb-api'
 import AddToFavoritesIcon from '../components/cardIcons/addToFavorites'
 
 const ActorsPage = (props) => {
-  const {  data, error, isLoading, isError }  = useQuery('cast', getCast)
+  const {  data, error, isLoading, isError }  = useQuery('cast', getActors)
 
   if (isLoading) {
     return <Spinner />

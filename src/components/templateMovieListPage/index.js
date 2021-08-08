@@ -7,12 +7,11 @@ import MovieList from "../movieList";
 
 const useStyles = makeStyles({
   root: {
-    //padding: "20px",
-    backgroundColor: "rgb(255, 255, 255)",
+    padding: "20px",
   },
 });
 
-function MovieListPageTemplate({ movies, title, action  }) {
+function MovieListPageTemplate({ movies, title, action }) {
   const classes = useStyles();
   const [nameFilter, setNameFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("0");

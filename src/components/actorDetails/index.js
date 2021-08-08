@@ -4,10 +4,12 @@ import Paper from "@material-ui/core/Paper";
 import CakeIcon from "@material-ui/icons/Cake";
 import PlaceIcon from "@material-ui/icons/Place";
 import StarRate from "@material-ui/icons/StarRate";
+import NavigationIcon from "@material-ui/icons/Navigation";
+import Fab from "@material-ui/core/Fab";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import MovieReview from "../movieReview";
+import MovieReviews from "../movieReviews";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -61,4 +63,4 @@ const ActorDetails = ({ actor }) => {  // Don't miss this!
     </>
   );
 };
-export default  ActorDetails ;
+export default  ActorDetails;

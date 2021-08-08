@@ -11,6 +11,7 @@ import StarRateIcon from "@material-ui/icons/StarRate";
 import Grid from "@material-ui/core/Grid";
 import img from '../../images/film-poster-placeholder.png';
 import { Link } from "react-router-dom";
+//import ActorsContextProvider from "../context/ActorsContext"
 
 
 const useStyles = makeStyles({

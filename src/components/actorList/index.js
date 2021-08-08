@@ -1,14 +1,14 @@
 import React from "react";
-import Actor from "../actorsCard";
+import Actor from "../actorCard";
 import Grid from "@material-ui/core/Grid";
 
-const ActorsList = ( {actor, action }) => {
-  let actorsCards = actor.map((a) => (
+const ActorList = ( {actors, action }) => {
+  let actorCards = actors.map((a) => (
     <Grid key={a.id} item xs={12} sm={6} md={4} lg={3} xl={2}>
       <Actor key={a.id} actor={a} action={action} />
     </Grid>
   ));
-  return actorsCards;
+  return actorCards;
 };
 
-export default ActorsList;
+export default ActorList;

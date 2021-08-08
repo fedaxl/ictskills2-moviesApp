@@ -6,7 +6,7 @@ import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import { getActorImages } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
-import Spinner from '../spinner';
+import Spinner from '../spinner'
 
 const useStyles = makeStyles((theme) => ({
   root: {
