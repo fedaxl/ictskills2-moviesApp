@@ -42,11 +42,11 @@ const SiteHeader = ( { history }) => {
   const menuOptions = [
     { label: "Home", path: "/" },
     { label: "Upcoming", path: "/movies/upcoming" },
-    { label: "Favorites", path: "/movies/favorites" },
-    { label: "Playlist", path: "/movies/playlist" },
     { label: "Popular", path: "/movies/popular" },
     { label: "Top Rated", path: "/movies/toprated" },
     { label: "Actors", path: "/actors" },
+    { label: "Favorites", path: "/movies/favorites" },
+    { label: "Playlist", path: "/movies/playlist" },
     //{ label: "Cast", path: "/cast/favorites" },
   ];
 
