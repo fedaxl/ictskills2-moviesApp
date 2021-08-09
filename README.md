@@ -612,10 +612,54 @@ https://api.themoviedb.org/3/person/${id}/images?api_key=${process.env.REACT_APP
 
 ### UI Design.
 
-...... Insert screenshots of the app's views, with appropriate captions (see example below). (For the Movies Fan App, only show the new/modified views) ........
+![login](https://user-images.githubusercontent.com/22814086/128782766-8b4d95d5-0e9a-4d0e-81cf-3e1d197af0d6.PNG)
+>Authentication: Login functionality
 
-![][view]
+![signout](https://user-images.githubusercontent.com/22814086/128782851-b2dd94d1-6dba-41ff-b630-c612aebdab76.PNG)
+>Authentication: Signout functionality
+
+![HomePage](https://user-images.githubusercontent.com/22814086/128782896-ebbdaff3-d32a-4adb-9945-af271c1438d4.PNG)
+>HomePage: Discover all the movies and contains the movie filter search
+
+![FilterMovies](https://user-images.githubusercontent.com/22814086/128782931-ef30f289-b001-49ac-aac7-d0e7252eaa1f.PNG)
+>Movie Filter: by Movie title
+
+![FIlterMoviebyGenre](https://user-images.githubusercontent.com/22814086/128782952-bed29f8a-3ca0-4a76-a6d8-7e8d3f4803f1.PNG)
+>Movie Filter: Filter movies by genres
+
+![movieDetails](https://user-images.githubusercontent.com/22814086/128782978-caf30b34-4730-453d-a8e4-487aa1b159a9.PNG)
+>Movie Details when click on More Info button
+
+![review](https://user-images.githubusercontent.com/22814086/128783197-a3b136d3-fec4-4e38-bf65-190a9b66f09c.PNG)
 >Shows detailed information on a movie. Clicking the 'Reviews' floating action button will display extracts from critic reviews.
+
+![SimilarMovies](https://user-images.githubusercontent.com/22814086/128782995-94e82283-da5c-4d8f-b7e7-2bdc4f4df5a3.PNG)
+>Search a similar movie when the button Search similar is clicked on the movie card
+
+![Favorite1](https://user-images.githubusercontent.com/22814086/128783068-18875a69-81e5-4138-9e6c-88e27c20d44e.PNG)
+![Favorite2](https://user-images.githubusercontent.com/22814086/128783089-b9051c9a-cd2d-41e5-9858-62d2d489c33e.PNG)
+>Add a movie to the Favorite movie page, user must to be logged in to see the Favorite movies
+
+![Upcoming](https://user-images.githubusercontent.com/22814086/128783135-40badede-be69-4985-b19d-a45e5df64050.PNG)
+>Upcoming movies page
+
+![TopRated](https://user-images.githubusercontent.com/22814086/128783152-b96c4c65-07cd-4759-87ff-2a65b9d9a766.PNG)
+>Top Rated Movies page
+
+![Popular](https://user-images.githubusercontent.com/22814086/128783169-f0cd89a2-d3e3-4457-845d-324b08586e05.PNG)
+>Popular Movies page
+
+![Playlist](https://user-images.githubusercontent.com/22814086/128783221-fe5ff85b-343b-447f-8a2b-8aa21374dea0.PNG)
+>Playlist page, you must to be logged in to view all the movies added to the playlist
+
+![Actors](https://user-images.githubusercontent.com/22814086/128783252-a5d2cf4a-f051-4c5f-897d-001116944462.PNG)
+>View all the most popular actors
+
+![ActorsDetail](https://user-images.githubusercontent.com/22814086/128783273-4912a53b-b54c-410d-ad1d-1416aae02f8b.PNG)
+>Check on the actor card for more details
+
+![ActorsFilter](https://user-images.githubusercontent.com/22814086/128783296-e351fdf1-aef7-4272-a68f-511b56af5f13.PNG)
+>Use the actor filter to search for a particular name
 
 ### Routing.
 
