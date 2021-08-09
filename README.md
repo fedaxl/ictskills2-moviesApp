@@ -5,20 +5,36 @@ WIT Id: 20091413
 
 ## Overview.
 
-...... State the app concept and objectives. If it's the Movies Fan app extension, only state the additional objectives .........
+The concept of this project was to expand the Movie App for movie fans in order to view all the most recent, top rated and popular movies from the [TMDB] database ('https://www.themoviedb.org/') and, once logged in, the user can also save their favorite movies and add them also to a playlist. The user can use the many searches to filter movies by generes, find similar movies and view all the most popular actors and details.
 
 
 ...... A bullet-point list of user features. If it's the Movies Fan app extension, only list new/modified features...... 
  
- + Feature 1
- + Feature 2
- + Feature 3
- + etc
- + etc
+ + Authentication: simple login/signout functionality
+ + HomePage: discover all the latest movies and find more, filter by genres
+ + Upcoming movies: view all the most recent movies
+ + Popular: view all the most popular movies of the moment
+ + Top Rated: view all the top rated movies of all time
+ + Actors: view a list of of all the most popular actors and view more
+ + Favorites: once logged in, a user can add, view and remove all the favorite movies
+ + Playlist: once logged in, a user can add and view all the movies added to the playlist page
+ + Reviews: a user can leave a review for a particular movie
 
 ## Setup requirements.
 
 ...... A brief explanation (to a third party) of any non-standard setup steps necessary to run your app/client locally (after cloning the repo) ........
+
+### **Project Build and start**
+
+---
+
+Back in the terminal
+`npm install`
+
+To start the App
+`npm start`
+
+---
 
 ## API Data Model
 
@@ -605,14 +621,19 @@ https://api.themoviedb.org/3/person/${id}/images?api_key=${process.env.REACT_APP
 
 ### Routing.
 
-...... Insert a list of the routes supported by your app and state the associated view. If relevant, specify which of the routes require authentication, i.e. protected/private. [For the Movies Fan app, only new routes should be listed.] ......... 
++ POST /reviews/form - submit a review
++ GET /reviews/:id - get a review
++ GET /movies/:id - get a movie by id
++ GET /movies/upcoming - displays all upcoming movies.
++ GET /movies/popular - displays all the popular movies.
++ GET /movies/toprated - displays all top rated movies.
++ GET /movies/:id/similar - get all the movies similar to the selected by id.
++ GET /movies/playlist (private route) - view all the movies added to the playlist
++ GET /movies/favorites (private route) - view all the movies added to the favorite page
++ GET /actors - retrieve all the actors
++ GET /actors/:id - get an actor by id
++ POST /login - login page for authentication
 
-+ GET /blogs - displays all published blogs.
-+ POST /blogs (protected) - add a new blog.
-+ GET /blogs/:id - displays a particular blog.
-+ GET /blogs/:id/comments (protected) - detail view of a particular blog and its comments.
-+ etc.
-+ etc.
 
 ## Independent learning (If relevant).
 
