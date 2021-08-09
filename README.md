@@ -1,15 +1,13 @@
 # Assignment - ReactJS app.
 
-Name: Federica Fiorenza
-WIT Id: 20091413
+- Name: Federica Fiorenza
+- WIT Id: 20091413
 
 ## Overview.
 
 The concept of this project was to expand the Movie App for movie fans in order to view all the most recent, top rated and popular movies from the [TMDB] database ('https://www.themoviedb.org/') and, once logged in, the user can also save their favorite movies and add them also to a playlist. The user can use the many searches to filter movies by generes, find similar movies and view all the most popular actors and details.
 
-
-...... A bullet-point list of user features. If it's the Movies Fan app extension, only list new/modified features...... 
- 
+App features:  
  + Authentication: simple login/signout functionality
  + HomePage: discover all the latest movies and find more, filter by genres
  + Upcoming movies: view all the most recent movies
