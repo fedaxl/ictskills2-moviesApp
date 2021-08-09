@@ -1,5 +1,5 @@
 {
-  "name": "moviesApp",
+  "name": "moviesapp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -45,10 +45,10 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@storybook/addon-actions": "^6.2.9",
-    "@storybook/addon-links": "^6.2.9",
-    "@storybook/node-logger": "^6.2.9",
-    "@storybook/preset-create-react-app": "^3.1.7",
-    "@storybook/react": "^6.2.9"
+    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-links": "^6.3.6",
+    "@storybook/node-logger": "^6.3.6",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.3.6"
   }
 }

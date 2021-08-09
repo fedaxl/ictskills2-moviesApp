@@ -13,6 +13,7 @@ export default {
   decorators: [
     (Story) => <MemoryRouter initialEntries={["/"]}>{Story()}</MemoryRouter>,
     (Story) => <ActorsContextProvider>{Story()}</ActorsContextProvider>,
+    (Story) => <MoviesContextProvider>{Story()}</MoviesContextProvider>,
   ],
 };
 

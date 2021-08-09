@@ -3,6 +3,7 @@ import ActorCard from "../components/actorCard";
 import SampleActor from "./sampleActor";
 import { MemoryRouter } from "react-router";
 import ActorsContextProvider from "../contexts/actorsContext";
+import MoviesContextProvider from "../contexts/moviesContext";
 import { action } from "@storybook/addon-actions";
 import AddToFavoritesIcon from "../components/cardIcons/addToFavorites";
 
@@ -12,6 +13,7 @@ export default {
   decorators: [
     (Story) => <MemoryRouter initialEntries={["/"]}>{Story()}</MemoryRouter>,
     (Story) => <ActorsContextProvider>{Story()}</ActorsContextProvider>,
+    (Story) => <MoviesContextProvider>{Story()}</MoviesContextProvider>,
   ],
 };
 
