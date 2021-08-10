@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Redirect, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from 'react-query/devtools'
 import AuthProvider from "./contexts/authContext"
@@ -16,10 +16,17 @@ import MovieReviewPage from "./pages/movieReviewPage";
 import MoviesContextProvider from "./contexts/moviesContext";
 import SiteHeader from "./components/siteHeader";
 import AddMovieReviewPage from './pages/addMovieReviewPage';
-import LoginPage from "./pages/loginPage";
 import PrivateRoute from "./privateRoute.js";
 import ActorsPage from "./pages/actorsPage";
 import ActorDetailsPage from "./pages/actorDetailsPage";
+import ProfilePage from "./pages/userAccountProfilePage";
+import LoginPage from "./pages/loginPage";
+import Signup from "./pages/signupPage"
+import Profile from "./pages/userAccount"
+import ForgotPassword from "./pages/forgotPassword"
+import UpdateProfile from "./pages/userAccountUpdatePage"
+
+
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -53,6 +60,10 @@ const App = () => {
           <Route path="/actors/:id" component={ActorDetailsPage} />
           <Route exact path="/" component={HomePage} />
           <Route path="/login" component={LoginPage} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/forgot-password" component={ForgotPassword} />
+          <PrivateRoute path="/update-profile" component={UpdateProfile} />
+           <PrivateRoute path="/profile" component={Profile} />
           <Redirect from="*" to="/" />
         </Switch>
         </MoviesContextProvider>

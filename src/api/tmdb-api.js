@@ -156,3 +156,16 @@ export const getActorImages = async ({queryKey}) => {
   }
   return response.json();
 };
+
+export const getProfile = async ( args ) => {
+  // console.log(args)
+  // eslint-disable-next-line no-unused-vars
+  const [prefix, { id }] = args.queryKey;
+  const response = await fetch(
+    `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
+  );
+  if (!response.ok) {
+    throw new Error(response.json().message);
+  }
+  return response.json();
+};

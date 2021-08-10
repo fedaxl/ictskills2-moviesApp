@@ -20,7 +20,8 @@ App features:
 
 ## Setup requirements.
 
-...... A brief explanation (to a third party) of any non-standard setup steps necessary to run your app/client locally (after cloning the repo) ........
+#### Firebase setup 
+
 
 ### **Project Build and start**
 
@@ -685,3 +686,7 @@ https://api.themoviedb.org/3/person/${id}/images?api_key=${process.env.REACT_APP
 [model]: ./data.jpg
 [view]: ./view.png
 [stories]: ./storybook.png
+
+React Authentication Crash Course With Firebase And Routing:
+https://www.youtube.com/watch?v=PKwu15ldZ7k by Web Dev Simplified
+GitHub code: https://github.com/WebDevSimplified/React-Firebase-Auth 

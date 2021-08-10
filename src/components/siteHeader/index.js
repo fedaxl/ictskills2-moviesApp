@@ -1,4 +1,5 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
+import { withRouter } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -8,10 +9,9 @@ import Button from "@material-ui/core/Button";
 import MenuIcon from "@material-ui/icons/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
-import { withRouter } from "react-router-dom";
 import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { AuthContext } from "../../contexts/authContext";
+//import { AuthContext } from "../../contexts/authContext";
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SiteHeader = ( { history }) => {
-  const context = useContext(AuthContext);
+  //const context = useContext(AuthContext);
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -47,6 +47,7 @@ const SiteHeader = ( { history }) => {
     { label: "Actors", path: "/actors" },
     { label: "Favorites", path: "/movies/favorites" },
     { label: "Playlist", path: "/movies/playlist" },
+    { label: "Login", path: "/profile"},
     //{ label: "Cast", path: "/cast/favorites" },
   ];
 
@@ -117,18 +118,6 @@ const SiteHeader = ( { history }) => {
                 ))}
               </>
             )}
-          <Typography variant="subtitle1" className={classes.loginoption} align="left">
-            {context.isAuthenticated ? (
-              <p>
-                Welcome! <button onClick={() => context.signout()}>Sign out</button>
-              </p>
-            ) : (
-              <p>
-                You are not logged in{" "}
-                <button onClick={() => history.push("/login")}>Login</button>
-              </p>
-            )}
-          </Typography>
         </Toolbar>
       </AppBar>
       <div className={classes.offset} />
