@@ -22,16 +22,80 @@ App features:
 
 #### Firebase setup 
 
+- Create a Firebase account at https://firebase.google.com/
+- Log into the Firebase console https://console.firebase.google.com/u/0/
+- Click on Add Project
+- Enter your project name (e.g. Development-Auth)
+- Skip Google Analytics as we don't need it for this project
+- Click on Create Project
+- Once logged into your project, go to Authentication (from the left menu) and click on Get Started
+- Click on Sign-In method
+- You can select any Provider, for this project I enabled Email/Password only (click on pencil, toggle Enable on and Save)
+![auth-by-email](https://user-images.githubusercontent.com/22814086/128906849-e25959a8-f1a9-4f21-b5f5-dabc8bac220f.PNG)
+- Click then on Project Overview and select the Web option to add Firebase to the app 
+- Fill up your app name and click on Register App!
+![registerappPNG](https://user-images.githubusercontent.com/22814086/128907451-bf20e033-2228-4b8c-827f-7dbb867cf939.PNG)
+- Once registered, you will obtain your credentials to copy and paste in your .env file
+
+```
+REACT_APP_FIREBASE_API_KEY=
+REACT_APP_FIREBASE_AUTH_DOMAIN=
+REACT_APP_FIREBASE_DATABASE_URL=
+REACT_APP_FIREBASE_PROJECT_ID=
+REACT_APP_FIREBASE_STORAGE_BUCKET=
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=
+REACT_APP_FIREBASE_APP_ID=
+REACT_APP_MEASUREMENT_ID=
+
+```
+
+![api key](https://user-images.githubusercontent.com/22814086/128907896-2fb04815-2cdc-4202-b291-edfda89539fc.PNG)
+- To create a Database, you can simple create a Firestore Database from the left menu and click on "create database"
+
+To successfully implement this functionality, you can follow then the instructions available at https://www.youtube.com/watch?v=PKwu15ldZ7k by Web Dev Simplified for training purpose on how to integrate successfully Firebase Autentication with React. 
+
+In your app you will have to install Firebase library (https://www.npmjs.com/package/firebase)
+
+```
+npm i firebase
+
+```
+and if you wish to use Bootstrap:
+
+```
+npm i bootstrap
+npm i react-bootstrap
+
+```
+
+Once your first user will signup, you will be able to see the account stored into Firebase:
+![auth-user-firebase](https://user-images.githubusercontent.com/22814086/128906086-0b21d120-3eb3-4e1b-9648-e875a5a8caf7.PNG)
+
+#### React-Bootstrap ####
+
+For the Login form, follow the instructions at
+https://react-bootstrap.github.io/getting-started/introduction/
+in order to use Bootstrap for React 
+
+Install React-Boostrap
+`npm install react-bootstrap@next bootstrap@5.0.2`
+
 
 ### **Project Build and start**
 
 ---
 
-Back in the terminal
+From your terminal you will have to launch the following command to install all the node modules 
+
 `npm install`
 
 To start the App
-`npm start`
+
+`npm start` (on local port 3000)
+
+To start the story book
+
+`npm run storybook` (on local port 6006)
 
 ---
 
@@ -613,11 +677,30 @@ https://api.themoviedb.org/3/person/${id}/images?api_key=${process.env.REACT_APP
 
 ### UI Design.
 
+#### Basic Login/Signout functionality - v1 ####
 ![login](https://user-images.githubusercontent.com/22814086/128782766-8b4d95d5-0e9a-4d0e-81cf-3e1d197af0d6.PNG)
 >Authentication: Login functionality
 
 ![signout](https://user-images.githubusercontent.com/22814086/128782851-b2dd94d1-6dba-41ff-b630-c612aebdab76.PNG)
 >Authentication: Signout functionality
+
+#### Login/Signout authentication functionality with Firebase - v2 ####
+![loginv2](https://user-images.githubusercontent.com/22814086/128910936-6f74c13a-1aa2-40da-9d79-dcf287fb5b9b.PNG)
+>Authentication: Login functionality with Firebase
+
+![loginORsignup](https://user-images.githubusercontent.com/22814086/128910984-478129ff-d1c9-4ede-a704-5a3d55fa6023.PNG)
+>Authentication: User can either Login or SignUp (or reset password)
+
+![userLoggedIn](https://user-images.githubusercontent.com/22814086/128911101-5b378ea4-0bb7-4ffc-b896-bfe8fa380a86.PNG)
+>User logged in, view
+
+![Signup](https://user-images.githubusercontent.com/22814086/128911029-728a76e7-68f9-416e-a33d-5e1627d47dfc.PNG)
+>SignUp functionality 
+
+![Update](https://user-images.githubusercontent.com/22814086/128911155-35f12f52-7d2f-4419-9bf9-7a9eaa1c061e.PNG)
+>Update profile (email or password)
+
+#### Pages ####
 
 ![HomePage](https://user-images.githubusercontent.com/22814086/128782896-ebbdaff3-d32a-4adb-9945-af271c1438d4.PNG)
 >HomePage: Discover all the movies and contains the movie filter search
