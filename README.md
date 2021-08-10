@@ -669,11 +669,30 @@ https://api.themoviedb.org/3/person/${id}/images?api_key=${process.env.REACT_APP
 
 ### UI Design.
 
+#### Basic Login/Signout functionality - v1 ####
 ![login](https://user-images.githubusercontent.com/22814086/128782766-8b4d95d5-0e9a-4d0e-81cf-3e1d197af0d6.PNG)
 >Authentication: Login functionality
 
 ![signout](https://user-images.githubusercontent.com/22814086/128782851-b2dd94d1-6dba-41ff-b630-c612aebdab76.PNG)
 >Authentication: Signout functionality
+
+#### Login/Signout authentication functionality with Firebase - v2 ####
+![loginv2](https://user-images.githubusercontent.com/22814086/128910936-6f74c13a-1aa2-40da-9d79-dcf287fb5b9b.PNG)
+>Authentication: Login functionality with Firebase
+
+![loginORsignup](https://user-images.githubusercontent.com/22814086/128910984-478129ff-d1c9-4ede-a704-5a3d55fa6023.PNG)
+>Authentication: User can either Login or SignUp (or reset password)
+
+![userLoggedIn](https://user-images.githubusercontent.com/22814086/128911101-5b378ea4-0bb7-4ffc-b896-bfe8fa380a86.PNG)
+>User logged in, view
+
+![Signup](https://user-images.githubusercontent.com/22814086/128911029-728a76e7-68f9-416e-a33d-5e1627d47dfc.PNG)
+>SignUp functionality 
+
+![Update](https://user-images.githubusercontent.com/22814086/128911155-35f12f52-7d2f-4419-9bf9-7a9eaa1c061e.PNG)
+>Update profile (email or password)
+
+#### Pages ####
 
 ![HomePage](https://user-images.githubusercontent.com/22814086/128782896-ebbdaff3-d32a-4adb-9945-af271c1438d4.PNG)
 >HomePage: Discover all the movies and contains the movie filter search
