@@ -54,18 +54,40 @@ REACT_APP_MEASUREMENT_ID=
 
 To successfully implement this functionality, you can follow then the instructions available at https://www.youtube.com/watch?v=PKwu15ldZ7k by Web Dev Simplified for training purpose on how to integrate successfully Firebase Autentication with React. 
 
+In your app you will have to install Firebase library (https://www.npmjs.com/package/firebase)
+
+```
+npm i firebase
+
+```
+and if you wish to use Bootstrap:
+
+```
+npm i bootstrap
+npm i react-bootstrap
+
+```
+
 Once your first user will signup, you will be able to see the account stored into Firebase:
 ![auth-user-firebase](https://user-images.githubusercontent.com/22814086/128906086-0b21d120-3eb3-4e1b-9648-e875a5a8caf7.PNG)
+
+
 
 ### **Project Build and start**
 
 ---
 
-Back in the terminal
+From your terminal you will have to launch the following command to install all the node modules 
+
 `npm install`
 
 To start the App
-`npm start`
+
+`npm start` (on local port 3000)
+
+To start the story book
+
+`npm run storybook` (on local port 6006)
 
 ---
 
