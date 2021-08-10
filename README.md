@@ -37,7 +37,8 @@ App features:
 [registerappPNG](https://user-images.githubusercontent.com/22814086/128907451-bf20e033-2228-4b8c-827f-7dbb867cf939.PNG)
 - Once registered, you will obtain your credentials to copy and paste in your .env file
 
-``REACT_APP_FIREBASE_API_KEY=
+```
+REACT_APP_FIREBASE_API_KEY=
 REACT_APP_FIREBASE_AUTH_DOMAIN=
 REACT_APP_FIREBASE_DATABASE_URL=
 REACT_APP_FIREBASE_PROJECT_ID=
@@ -45,7 +46,9 @@ REACT_APP_FIREBASE_STORAGE_BUCKET=
 REACT_APP_FIREBASE_MESSAGING_SENDER_ID=
 REACT_APP_FIREBASE_APP_ID=
 REACT_APP_MEASUREMENT_ID=
-``
+
+```
+
 ![api key](https://user-images.githubusercontent.com/22814086/128907896-2fb04815-2cdc-4202-b291-edfda89539fc.PNG)
 - To create a Database, you can simple create a Firestore Database from the left menu and click on "create database"
 
