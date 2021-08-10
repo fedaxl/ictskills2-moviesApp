@@ -71,6 +71,14 @@ npm i react-bootstrap
 Once your first user will signup, you will be able to see the account stored into Firebase:
 ![auth-user-firebase](https://user-images.githubusercontent.com/22814086/128906086-0b21d120-3eb3-4e1b-9648-e875a5a8caf7.PNG)
 
+#### React-Bootstrap ####
+
+For the Login form, follow the instructions at
+https://react-bootstrap.github.io/getting-started/introduction/
+in order to use Bootstrap for React 
+
+Install React-Boostrap
+`npm install react-bootstrap@next bootstrap@5.0.2`
 
 
 ### **Project Build and start**
