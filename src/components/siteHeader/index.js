@@ -11,6 +11,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import VpnKeyIcon from '@material-ui/icons/VpnKey';
 //import { AuthContext } from "../../contexts/authContext";
 
 const useStyles = makeStyles((theme) => ({

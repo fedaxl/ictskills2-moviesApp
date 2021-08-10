@@ -4,7 +4,6 @@ import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../contexts/authContext'
 
 export default function Login() {
-
     const emailRef = useRef()
     const passwordRef = useRef()
     const { login } = useAuth()
@@ -28,31 +27,31 @@ export default function Login() {
 
     return (
         <>
-            <Container className="d-flex align-item-center justify-content-center" style={{minHeight: '100vh'}}>
-                <div className="w-100 mt-3" style={{maxWidth: '400px'}}>
-                    <Card>
-                        <Card.Body>
-                            <h2 className="text-center mb-4">Log In</h2>
+            <Container align="center" style={{minHeight: '100vh'}}>
+                <div style={{maxWidth: '400px'}}>
+                    <Card >
+                        <Card.Body >
+                            <h2>Log In</h2>
                             {error && <Alert variant="danger">{error}</Alert>}
                             <Form onSubmit={handleSubmit}>
-                                <Form.Group id="email">
-                                    <Form.Label>Email</Form.Label>
+                                <Form.Group className="mb-3" id="email" align="left">
+                                    <Form.Label column sm="3">Email</Form.Label>
                                     <Form.Control type="email" ref={emailRef} required />
                                 </Form.Group>
-                                <Form.Group id="password">
-                                    <Form.Label>Password</Form.Label>
+                                <Form.Group className="mb-3" id="password" align="left">
+                                    <Form.Label column sm="3">Password</Form.Label>
                                     <Form.Control type="password" ref={passwordRef} required />
                                 </Form.Group>
-                                <Button disabled={loading} className="w-100 mt-3" type="submit" on>
+                                <Button disabled={loading} variant="primary" type="submit" on>
                                     Log In
                                 </Button>
                             </Form>
-                            <div className="w-100 mt-3 text-center">
+                            <div align="center">
                               <Link to="/forgot-password">Forgot Password?</Link>
                             </div>
                         </Card.Body>
                     </Card>   
-                    <div className="w-100 text-center">
+                    <div align="center">
                         Need an account? <Link to="/signup">Sign Up! </Link>
                     </div>
                 </div>

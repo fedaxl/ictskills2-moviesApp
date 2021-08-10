@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from 'react-query/devtools'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import AuthProvider from "./contexts/authContext"
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";

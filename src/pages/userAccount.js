@@ -2,6 +2,14 @@ import React, { useState } from 'react'
 import { Card, Button, Alert, Container } from 'react-bootstrap'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../contexts/authContext'
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+    root: {
+      padding: "20px",
+    },
+    
+  });
 
 export default function Profile() {
 
