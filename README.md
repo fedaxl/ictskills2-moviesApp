@@ -34,7 +34,7 @@ App features:
 ![auth-by-email](https://user-images.githubusercontent.com/22814086/128906849-e25959a8-f1a9-4f21-b5f5-dabc8bac220f.PNG)
 - Click then on Project Overview and select the Web option to add Firebase to the app 
 - Fill up your app name and click on Register App!
-[registerappPNG](https://user-images.githubusercontent.com/22814086/128907451-bf20e033-2228-4b8c-827f-7dbb867cf939.PNG)
+![registerappPNG](https://user-images.githubusercontent.com/22814086/128907451-bf20e033-2228-4b8c-827f-7dbb867cf939.PNG)
 - Once registered, you will obtain your credentials to copy and paste in your .env file
 
 ```
