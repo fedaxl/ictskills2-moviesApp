@@ -20,7 +20,6 @@ import AddMovieReviewPage from './pages/addMovieReviewPage';
 import PrivateRoute from "./privateRoute.js";
 import ActorsPage from "./pages/actorsPage";
 import ActorDetailsPage from "./pages/actorDetailsPage";
-import ProfilePage from "./pages/userAccountProfilePage";
 import LoginPage from "./pages/loginPage";
 import Signup from "./pages/signupPage"
 import Profile from "./pages/userAccount"
