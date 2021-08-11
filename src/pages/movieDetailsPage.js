@@ -22,6 +22,7 @@ const MovieDetailsPage = (props) => {
   if (isError) {
     return <h1>{error.message}</h1>;
   }
+
   return (
     <>
       {movie ? (
@@ -36,5 +37,7 @@ const MovieDetailsPage = (props) => {
     </>
   );
 };
+
+
 
 export default withRouter(MovieDetailsPage);
