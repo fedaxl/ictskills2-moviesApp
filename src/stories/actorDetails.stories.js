@@ -1,11 +1,11 @@
 import React from "react";
 import ActorDetails from "../components/actorDetails";
-import SampleActor from "./sampleActor";
+import SampleActor from "../../.storybook/sampleActor";
 import { MemoryRouter } from "react-router";
 import ActorsContextProvider from "../contexts/actorsContext";
 
 export default {
-  title: "Actors Details Page/ActorsDetails",
+  title: "Actors/ActorsDetails",
   component: ActorDetails,
   decorators: [
     (Story) => <MemoryRouter initialEntries={["/"]}>{Story()}</MemoryRouter>,

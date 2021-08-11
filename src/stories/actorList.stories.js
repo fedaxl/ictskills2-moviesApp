@@ -6,9 +6,12 @@ import { action } from "@storybook/addon-actions";
 import AddToFavoritesIcon from "../components/cardIcons/addToFavorites";
 import Grid from "@material-ui/core/Grid";
 import ActorsContextProvider from "../contexts/actorsContext";
+import MoviesContextProvider from "../contexts/moviesContext";
+
+
 
 export default {
-  title: "Home Page/Actor List",
+  title: "Actors/Actor List",
   component: ActorList,
   decorators: [
     (Story) => <MemoryRouter initialEntries={["/"]}>{Story()}</MemoryRouter>,

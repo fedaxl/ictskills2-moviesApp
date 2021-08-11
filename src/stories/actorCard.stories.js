@@ -8,7 +8,7 @@ import { action } from "@storybook/addon-actions";
 import AddToFavoritesIcon from "../components/cardIcons/addToFavorites";
 
 export default {
-  title: "Home Page/ActorCard",
+  title: "Actors/ActorCard",
   component: ActorCard,
   decorators: [
     (Story) => <MemoryRouter initialEntries={["/"]}>{Story()}</MemoryRouter>,
@@ -38,4 +38,4 @@ export const Exceptional = () => {
     />
   );
 };
-Exceptional.storyName = "exception";
+Exceptional.storyName = "Exception";
