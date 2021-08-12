@@ -674,22 +674,22 @@ https://api.themoviedb.org/3/person/${id}/images?api_key=${process.env.REACT_APP
 #### Screenshots from the Storybook
 
 Stories related to Actors Components
-![storybook-actor](https://user-images.githubusercontent.com/22814086/129118483-868f7b68-6df2-4b35-9049-21db369452b2.PNG)
-![image](https://user-images.githubusercontent.com/22814086/129118566-3a66c84a-5695-434c-aab9-8bc33aefb26d.png)
-![image](https://user-images.githubusercontent.com/22814086/129118628-fbf69d56-4ce1-4573-bf7a-db0d8ed1018a.png)
+![storybook-actor](https://user-images.githubusercontent.com/22814086/129118483-868f7b68-6df2-4b35-9049-21db369452b2.PNG =250x250)
+![image](https://user-images.githubusercontent.com/22814086/129118566-3a66c84a-5695-434c-aab9-8bc33aefb26d.png =250x250)
+![image](https://user-images.githubusercontent.com/22814086/129118628-fbf69d56-4ce1-4573-bf7a-db0d8ed1018a.png =250x250)
 
 Filters
-![image](https://user-images.githubusercontent.com/22814086/129118651-d18aff73-1a1e-4dbc-a673-4b1d124673cb.png)
-![image](https://user-images.githubusercontent.com/22814086/129118676-7d2de9c5-95c7-4c16-b689-b27eae5f9991.png)
+![image](https://user-images.githubusercontent.com/22814086/129118651-d18aff73-1a1e-4dbc-a673-4b1d124673cb.png =250x250)
+![image](https://user-images.githubusercontent.com/22814086/129118676-7d2de9c5-95c7-4c16-b689-b27eae5f9991.png =250x250)
 
 Movies components
-![image](https://user-images.githubusercontent.com/22814086/129118705-209cdfcc-8886-4477-b952-fcd2b7b6f8e0.png)
-![image](https://user-images.githubusercontent.com/22814086/129118714-0eaa8b18-6ed7-42fc-b4d9-bbd0a89ea2b3.png)
-![image](https://user-images.githubusercontent.com/22814086/129118733-d2763307-1b18-46cd-901c-30cd53f87855.png)
-![image](https://user-images.githubusercontent.com/22814086/129118757-05e51797-9de0-4588-9ae6-b1de5cc0a42d.png)
+![image](https://user-images.githubusercontent.com/22814086/129118705-209cdfcc-8886-4477-b952-fcd2b7b6f8e0.png =250x250)
+![image](https://user-images.githubusercontent.com/22814086/129118714-0eaa8b18-6ed7-42fc-b4d9-bbd0a89ea2b3.png =250x250)
+![image](https://user-images.githubusercontent.com/22814086/129118733-d2763307-1b18-46cd-901c-30cd53f87855.png =250x250)
+![image](https://user-images.githubusercontent.com/22814086/129118757-05e51797-9de0-4588-9ae6-b1de5cc0a42d.png =250x250)
 
 New Header for the App
-![image](https://user-images.githubusercontent.com/22814086/129118786-8be531c3-1b8a-4c8a-b82e-4b636a43be95.png)
+![image](https://user-images.githubusercontent.com/22814086/129118786-8be531c3-1b8a-4c8a-b82e-4b636a43be95.png =250x250)
 
 ### UI Design.
 
