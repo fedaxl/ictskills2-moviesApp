@@ -674,7 +674,7 @@ https://api.themoviedb.org/3/person/${id}/images?api_key=${process.env.REACT_APP
 #### Screenshots from the Storybook
 
 Stories related to Actors Components
-![storybook-actor |50%](https://user-images.githubusercontent.com/22814086/129118483-868f7b68-6df2-4b35-9049-21db369452b2.PNG)
+<img src=https://user-images.githubusercontent.com/22814086/129118483-868f7b68-6df2-4b35-9049-21db369452b2.PNG" height="200">
 ![image](https://user-images.githubusercontent.com/22814086/129118566-3a66c84a-5695-434c-aab9-8bc33aefb26d.png)
 ![image](https://user-images.githubusercontent.com/22814086/129118628-fbf69d56-4ce1-4573-bf7a-db0d8ed1018a.png)
 
