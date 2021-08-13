@@ -107,7 +107,7 @@ useEffect(() => {
       </Typography>
       <br></br>
       <Typography variant="h5" component="h3">
-        Knonw for 
+        Known for 
       </Typography>
       <br></br>
       <TableContainer component={Paper}>

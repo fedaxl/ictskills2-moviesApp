@@ -10,10 +10,13 @@ The concept of this project was to expand the Movie App for movie fans in order 
 App features:  
  + Authentication: simple login/signout functionality
  + HomePage: discover all the latest movies and find more, filter by genres
+ + Movie Details Page: Check for a Movie plot and Full cast members
  + Upcoming movies: view all the most recent movies
  + Popular: view all the most popular movies of the moment
  + Top Rated: view all the top rated movies of all time
+ + Similar Movie Page: select a movie and check for similar
  + Actors: view a list of of all the most popular actors and view more
+ + Actor Details Page: check an actor's biography and filmography 
  + Favorites: once logged in, a user can add, view and remove all the favorite movies
  + Playlist: once logged in, a user can add and view all the movies added to the playlist page
  + Reviews: a user can leave a review for a particular movie
