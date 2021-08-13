@@ -785,7 +785,7 @@ New Header for the App
 ![FIlterMoviebyGenre](https://user-images.githubusercontent.com/22814086/128782952-bed29f8a-3ca0-4a76-a6d8-7e8d3f4803f1.PNG)
 >Movie Filter: Filter movies by genres
 
-![movieDetails](https://user-images.githubusercontent.com/22814086/128782978-caf30b34-4730-453d-a8e4-487aa1b159a9.PNG)
+![movieDetails](https://user-images.githubusercontent.com/22814086/129372021-20b9f641-428a-4aa3-9724-79a2cc891b58.PNG)
 >Movie Details when click on More Info button
 
 ![review](https://user-images.githubusercontent.com/22814086/128783197-a3b136d3-fec4-4e38-bf65-190a9b66f09c.PNG)
