@@ -667,6 +667,64 @@ profile_path: "/euDPyqLnuwaWMHajcU3oZ9uZezR.jpg"
 https://api.themoviedb.org/3/person/${id}/images?api_key=${process.env.REACT_APP_TMDB_KEY}
 ```
 
+#### Get Actor Credits in Movies
+
+```http
+https://api.themoviedb.org/3/person/${id}/combined_credits?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&include_video=false&page=1`
+```
+```JSON
+{
+cast: [
+{
+vote_average: 5.8,
+overview: "Two rival politicians compete to win an election to represent their small North Carolina congressional district in the United States House of Representatives.",
+release_date: "2012-08-09",
+id: 77953,
+adult: false,
+backdrop_path: "/ncNKvR7mp0m2B0TxXhYhzR7sTU8.jpg",
+genre_ids: [
+35
+],
+vote_count: 1325,
+original_language: "en",
+original_title: "The Campaign",
+poster_path: "/jMWjJ13sFTT07DwjNlqh8VY4sK6.jpg",
+title: "The Campaign",
+video: false,
+popularity: 10.413,
+character: "Rose Brady",
+credit_id: "52fe4985c3a368484e12fd33",
+order: 3,
+media_type: "movie"
+},
+{
+adult: false,
+backdrop_path: "/fKmTjoV2wXs8U0wXZtys2zC5tEd.jpg",
+genre_ids: [
+35,
+18
+],
+id: 312796,
+original_language: "en",
+original_title: "The Squeeze",
+overview: "A humble young man with uncommon skills from a small southern town gets caught up in high stakes golf matches between big-time gamblers until the game becomes life and death.",
+poster_path: "/slfooToW48qtqEHKr755VjksRWG.jpg",
+release_date: "2015-04-17",
+title: "The Squeeze",
+video: false,
+vote_average: 5.1,
+vote_count: 7,
+popularity: 1.943,
+character: "Jessie",
+credit_id: "551afbfd9251414aed0005b0",
+order: 3,
+media_type: "movie"
+},
+...
+```
+
+
+
 ## App Design.
 
 ### Component catalogue.

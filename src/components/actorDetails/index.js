@@ -123,7 +123,7 @@ useEffect(() => {
          {cast.map((c) => (
             <TableRow key={c.id} className={classes.tableCell}>
               <TableCell component="th" scope="row">
-                {c.original_name}
+                {c.title}
               </TableCell>
               <TableCell className={classes.tableCell}>{c.character}</TableCell>
               <TableCell className={classes.tableCell}>
@@ -135,7 +135,7 @@ useEffect(() => {
                     },
                   }}
                 >
-                  Full Bio
+                  Movie Link
                 </Link>
               </TableCell>
             </TableRow>
