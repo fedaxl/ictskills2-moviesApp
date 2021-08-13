@@ -169,3 +169,14 @@ export const getProfile = async ( args ) => {
   }
   return response.json();
 };
+
+export const getActorCredits = (id) => {
+  return fetch(
+    `https://api.themoviedb.org/3/person/${id}/combined_credits?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&include_video=false&page=1`
+  )
+    .then((res) => res.json())
+    .then((json) => {
+      console.log(json.cast);
+      return json.cast;
+    });
+};

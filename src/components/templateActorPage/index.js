@@ -36,6 +36,7 @@ const TemplateActorPage = ({ actor, children }) => {
   }
   const images = data.profiles 
 
+
   return (
     <>
       <ActorHeader actor={actor} />
