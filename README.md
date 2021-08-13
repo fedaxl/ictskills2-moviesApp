@@ -755,8 +755,8 @@ New Header for the App
 ![Actors](https://user-images.githubusercontent.com/22814086/128783252-a5d2cf4a-f051-4c5f-897d-001116944462.PNG)
 >View all the most popular actors
 
-![ActorsDetail](https://user-images.githubusercontent.com/22814086/128783273-4912a53b-b54c-410d-ad1d-1416aae02f8b.PNG)
->Check on the actor card for more details
+![ActorsDetail](![ActorsDetail](https://user-images.githubusercontent.com/22814086/129367297-7c48b8d8-fd4d-4036-b901-c0845fec06df.PNG))
+>Check on the actor card for more details, find out about Popularity, Birthday and in which movies the person acted
 
 ![ActorsFilter](https://user-images.githubusercontent.com/22814086/128783296-e351fdf1-aef7-4272-a68f-511b56af5f13.PNG)
 >Use the actor filter to search for a particular name
