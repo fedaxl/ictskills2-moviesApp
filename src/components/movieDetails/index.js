@@ -126,11 +126,11 @@ useEffect(() => {
           </li>
         ))}
       </Paper>
-
+      <br></br>
       <Typography variant="h5" component="h3">
         Cast
       </Typography>
-
+      <br></br>
       <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="credits table">
         <TableHead>

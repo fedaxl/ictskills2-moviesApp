@@ -1,3 +1,4 @@
+//get all the movies by excluding adult content
 export const getMovies = async () => {
   const response = await fetch(
     `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&include_adult=false&include_video=false&page=1`
@@ -8,6 +9,7 @@ export const getMovies = async () => {
   return response.json();
 };
   
+//get movie details
 export const getMovie = async ( args ) => {
   // console.log(args)
   // eslint-disable-next-line no-unused-vars
@@ -21,7 +23,8 @@ export const getMovie = async ( args ) => {
   return response.json();
 };
   
-  export const getGenres = async () => {
+//get a list of genres
+export const getGenres = async () => {
     const response = await  fetch(
       "https://api.themoviedb.org/3/genre/movie/list?api_key=" +
         process.env.REACT_APP_TMDB_KEY +
@@ -33,7 +36,9 @@ export const getMovie = async ( args ) => {
     return response.json();
   };
   
-  export const getMovieImages = async ({queryKey}) => {
+
+//get movie images
+export const getMovieImages = async ({queryKey}) => {
     // eslint-disable-next-line no-unused-vars
     const [prefix, { id }] = queryKey;
     const response = await fetch(
@@ -45,7 +50,8 @@ export const getMovie = async ( args ) => {
     return response.json();
   };
 
-  export const getMovieReviews = (id) => {
+//get movie reviews
+export const getMovieReviews = (id) => {
     return fetch(
       `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${process.env.REACT_APP_TMDB_KEY}`
     )
@@ -56,7 +62,8 @@ export const getMovie = async ( args ) => {
       });
   };
 
-  export const getUpcomingMovies = async () => {
+//get list of Upcoming movies
+export const getUpcomingMovies = async () => {
     const response = await fetch(
       `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
     )
@@ -66,7 +73,7 @@ export const getMovie = async ( args ) => {
     return response.json();
   };
 
-  //adding API to retrieve Top Rated Movies
+//adding API to retrieve Top Rated Movies
   export const getTopRatedMovies = async () => {
     const response = await fetch(
       `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
@@ -78,7 +85,7 @@ export const getMovie = async ( args ) => {
   };
 
   
-  //adding API to retrieve Popular Movies
+//adding API to retrieve Popular Movies
   export const getPopularMovies = async () => {
     const response = await fetch(
       `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
@@ -89,7 +96,7 @@ export const getMovie = async ( args ) => {
     return response.json();
   };
 
-  //adding API to retrieve Similar Movies
+//adding API to retrieve Similar Movies
   export const getSimilarMovies = async ( args ) => {
     const [prefix, { id }] = args.queryKey;
     const response = await fetch(
@@ -101,7 +108,7 @@ export const getMovie = async ( args ) => {
     return response.json();
   }; 
 
-  //adding API to get Credits / Cast
+//adding API to get Credits / Cast
   export const getCast = async (id) => {
     const fetchResponse = await fetch(
       `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_TMDB_KEY}`
@@ -111,7 +118,8 @@ export const getMovie = async ( args ) => {
     return json;
   };
 
-  export const getMovieCredits = (id) => {
+//get movie credits (cast)
+ export const getMovieCredits = (id) => {
     return fetch(
       `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_TMDB_KEY}`
     )
@@ -122,6 +130,7 @@ export const getMovie = async ( args ) => {
       });
   };
 
+//get actor details
   export const getActor = async ( args ) => {
     console.log(args)
    // eslint-disable-next-line no-unused-vars
@@ -135,6 +144,7 @@ export const getMovie = async ( args ) => {
    return response.json();
  };
 
+//get a list of actors
  export const getActors = async () => {
   const response = await fetch(
     `https://api.themoviedb.org/3/person/popular?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&include_video=false&page=1`
@@ -145,6 +155,7 @@ export const getMovie = async ( args ) => {
   return response.json();
 };
 
+//get actor images
 export const getActorImages = async ({queryKey}) => {
   // eslint-disable-next-line no-unused-vars
   const [prefix, { id }] = queryKey;
@@ -157,6 +168,7 @@ export const getActorImages = async ({queryKey}) => {
   return response.json();
 };
 
+//get actor's profile
 export const getProfile = async ( args ) => {
   // console.log(args)
   // eslint-disable-next-line no-unused-vars
@@ -170,6 +182,7 @@ export const getProfile = async ( args ) => {
   return response.json();
 };
 
+//get actors credits in movies, return cast JSON that contains movie title, character played and other info
 export const getActorCredits = (id) => {
   return fetch(
     `https://api.themoviedb.org/3/person/${id}/combined_credits?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&include_video=false&page=1`
